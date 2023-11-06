@@ -1,0 +1,159 @@
+
+*********************Even or Odd*******************************
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Hello Mono World");
+        int i;
+        i=int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the number:");
+        if(i%2==0)
+        {
+            Console.WriteLine("It's Even");
+        }
+        else{
+            Console.WriteLine("Its odd");
+        }
+    }
+}
+
+
+
+**********Print hello world 10 times *******************
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        for(int i=0;i<=10;i++)
+        {
+        Console.WriteLine ("{0} Hello Mono World",+i);
+        }
+    }
+}
+
+
+******************Reverse of a number*************************
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int reversedNumber = ReverseNumber(number);
+
+        Console.WriteLine("Reversed number: " + reversedNumber);
+    }
+
+    static int ReverseNumber(int number)
+    {
+        // Convert the number to a string
+        string numberStr = number.ToString();
+
+        // Convert the string to a char array
+        char[] charArray = numberStr.ToCharArray();
+
+        // Reverse the char array
+        Array.Reverse(charArray);
+
+        // Convert the reversed char array back to a string
+        string reversedStr = new string(charArray);
+
+        // Parse the reversed string to get the reversed number
+        int reversedNumber = int.Parse(reversedStr);
+
+        return reversedNumber;
+    }
+}
+
+
+
+*****************reverse a string using for loop ************************8
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a string: ");
+        string input = Console.ReadLine();
+
+        string reversed = ReverseString(input);
+
+        Console.WriteLine("Reversed string: " + reversed);
+    }
+
+    static string ReverseString(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
+    }
+}
+
+
+
+******************8reverse a string using LINQ*******************
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a string: ");
+        string input = Console.ReadLine();
+
+        string reversed = new string(input.Reverse().ToArray());
+
+        Console.WriteLine("Reversed string: " + reversed);
+    }
+}
+
+
+******************************Reverse a string using stringBuilder**************************
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a string: ");
+        string input = Console.ReadLine();
+
+        string reversed = ReverseString(input);
+
+        Console.WriteLine("Reversed string: " + reversed);
+    }
+
+    static string ReverseString(string input)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            sb.Append(input[i]);
+        }
+
+        return sb.ToString();
+    }
+}
+
+
